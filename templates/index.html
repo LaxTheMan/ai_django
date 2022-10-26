@@ -11,7 +11,7 @@
     <script src="{% static 'js/sample.js' %}"></script>
 </head>
 
-<body>
+<body onload="runCam()">
     Welcome to the site!
 
     <h2>Enter Details of a Person</h2>
@@ -37,6 +37,8 @@
 
         <input type="submit" value="Submit!">
     </form>
+
+    <input type="button" value="Open Camera" onclick="openCam()">
 
 </body>
 

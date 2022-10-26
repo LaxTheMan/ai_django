@@ -19,6 +19,8 @@ from home import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index,name="Homepage"),
-    path('saveDetails/', views.run, name="Application"),
+    path('', views.index, name="Homepage"),
+    path('saveDetails/', views.saveDetails, name="Application"),
+    path('cam/', views.webcam, name="Camera"),
+    path('message/', views.defaultMsg, name="DefaultMessage"),
 ]
