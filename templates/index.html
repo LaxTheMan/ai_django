@@ -1,16 +1,43 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'index.css' %}">
-    <script src="{% static 'sample.js' %}"></script>
+    <title>Django Sample Application</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="{% static 'js/sample.js' %}"></script>
 </head>
+
 <body>
-    hello
-    {{data}}
+    Welcome to the site!
+
+    <h2>Enter Details of a Person</h2>
+    <br>
+    <form method="POST" action="{% url 'Application' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            <label for="fname">First Name</label>
+        </div>
+        <input type="text" id="fname" name="firstName" value="John"><br><br>
+
+        <div>
+            <label for="lname">Last Name</label>
+        </div>
+        <input type="text" id="lname" name="lastName" value="Doe"><br><br>
+
+        <div>
+            <label for="number">Phone Number</label>
+        </div>
+        <input type="tel" id="number" name="phoneNumber" value="9876543210"><br><br>
+
+        <h3>{{a}}</h3>
+
+        <input type="submit" value="Submit!">
+    </form>
+
 </body>
+
 </html>
