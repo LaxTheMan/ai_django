@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from home.models import samplemodel
+from home.models import dataModel
 
-admin.site.register(samplemodel)
+admin.site.register(dataModel)
 
 # Register your models here.

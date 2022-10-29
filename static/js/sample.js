@@ -1,8 +1,3 @@
-console.log("123");
-
-function openCam() {
-    window.location.href = "/cam";
-}
 
 function returnHome() {
     window.location.href = "/"

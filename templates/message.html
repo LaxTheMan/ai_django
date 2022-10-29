@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,15 @@
     <link rel="stylesheet" href="{% static 'css/index.css'%}">
     <script src="{% static 'js/sample.js' %}"></script>
 </head>
+
 <body>
     <h1>Following message appeared: </h1><br>
     {{msg}}
     <br><br>
+    <h2>{{img}}</h2>
+    <img src= "../../detectedFace.jpg" alt="Detected Image File">
 
+    <!-- <input type="button" value="Go Home" onclick="location.href='{% url 'Homepage' %}'"> -->
     <input type="button" value="Go Home" onclick="returnHome()">
 
 </body>

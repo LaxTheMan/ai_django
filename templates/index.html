@@ -36,10 +36,11 @@
         <h3>{{a}}</h3>
 
         <input type="submit" value="Submit!">
+
+        <input type="button" value="Capture Image" id="capture-button">
+        <input type="button" value="Reset" id="reset-button">
     </form>
-
-    <input type="button" value="Open Camera" onclick="openCam()">
-
+    <img src="{% url 'video-feed' %}" alt="Webcam Video Feed">
 </body>
 
 </html>
