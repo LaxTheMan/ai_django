@@ -3,6 +3,10 @@ function returnHome() {
     window.location.href = "/"
 }
 
+function capture() {
+    windows.location.href = "/capture"
+}
+
 function runCam() {
     Webcam.set({
         width: 320,

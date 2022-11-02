@@ -22,11 +22,11 @@ from home import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name="Homepage"),
-    path('saveDetails', views.saveDetails, name="Application"),
+    path('', views.index, name="homepage"),
+    path('saveDetails', views.saveDetails, name="application"),
     path('video-feed', views.index2, name="video-feed"),
     path('capture', views.captureImage, name="capture"),
-    path('message', views.defaultMsg, name="DefaultMessage"),
+    path('message', views.defaultMsg, name="defaultMessage"),
 ]
 
 if settings.DEBUG:

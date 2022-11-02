@@ -13,10 +13,9 @@
 
     <body onload="runCam()">
         <div class="container">
-            <br>
         <h2>Enter Details of a Person</h2>
         <br>
-            <form method="POST" action="{% url 'Application' %}" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'application' %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="fname">First Name</label>
@@ -31,7 +30,7 @@
                     <input type="tel" class="form-control" id="number" name="phoneNumber" placeholder="Enter phone number">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <input type="button" class="btn btn-primary" value="Capture Image" id="capture-button">
+                <input type="button" class="btn btn-primary" value="Capture Image" id="capture-button" onclick="capture()">
                 <input type="button" class="btn btn-primary" value="Reset" id="reset-button">
                 <h3>{{a}}</h3>
             </form>
